@@ -14,5 +14,3 @@ function apiService(searchQuery, page = 1) {
 }
 
 export default apiService;
-
-// page=номер_страницы
