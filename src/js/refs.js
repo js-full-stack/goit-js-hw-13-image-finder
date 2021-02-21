@@ -5,4 +5,4 @@ const refs = {
   btn: document.querySelector('[data-action="load-more"]'),
 };
 
-export default refs;
+export const { form, input, imageList, btn } = refs;

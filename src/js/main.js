@@ -1,28 +1,19 @@
-import refs from './refs';
 import debounce from 'lodash.debounce';
-import imgService from './imgService';
-// import apiService from './apiService';
+import imgService from './apiService';
 import updateMarkup from './update-markup';
+import { form, input, imageList, btn } from './refs';
+form.addEventListener('input', debounce(requestHandler, 750));
 
-refs.form.addEventListener('input', debounce(requestHandler, 750));
-
-let searchQuery = '';
-let page = 1;
 function requestHandler(event) {
   event.preventDefault();
-  searchQuery = refs.input.value;
-  page = 1;
-  imgService.apiService(searchQuery, page).then(data => {
-    updateMarkup(data);
-    page++;
-  });
+  imgService.resetPage();
+  imageList.innerHTML = '';
+  imgService.query = event.target.value;
+  imgService.apiService().then(updateMarkup);
 }
 
 function loadMore() {
-  imgService.apiService(searchQuery, page).then(data => {
-    updateMarkup(data);
-    page++;
-  });
+  imgService.apiService().then(updateMarkup);
 }
 
-refs.btn.addEventListener('click', loadMore);
+btn.addEventListener('click', loadMore);
