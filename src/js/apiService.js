@@ -7,11 +7,10 @@ export default {
     const baseURL = 'https://pixabay.com/api/';
     const url = `${baseURL}?image_type=photo&orientation=horizontal&q=${this.query}&page=${this.page}&per_page=3&key=${key}`;
 
- 
     return fetch(url)
       .then(res => res.json())
       .then(({ hits }) => {
-        this.page ++ 1;
+        this.page++;
         return hits;
       });
   },
