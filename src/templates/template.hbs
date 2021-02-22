@@ -1,10 +1,20 @@
 {{#each this}}
-<img src="{{webformatURL}}" alt="">
-<ul>
-    <li>Likes: {{likes}}</li>
-    <li>Comments: {{comments}}</li>
-    <li>Downloads: {{downloads}}</li>
-</ul>
+
+<div class="gallery-list">
+    <div class="thumb">
+        <img class="gallery-img" , alt="{{tags}}" width="300" src="{{webformatURL}}">
+
+
+        <ul class="gallery-list">
+            <li>Likes: {{likes}}</li>
+            <li>Comments: {{comments}}</li>
+            <li>Downliads: {{downloads}}</li>
+        </ul>
+
+
+
+    </div>
+</div>
 {{/each}}
 
 

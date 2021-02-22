@@ -24,6 +24,40 @@ body {
   margin-top: 30px;
 }
 
+/* .thumb {
+} */
+
+ul {
+  list-style: none;
+}
+.flexbox {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .is-hidden {
   display: none;
+}
+
+input[name='query'] {
+  margin-bottom: 30px;
+}
+
+.gallery {
+  display: flex;
+  flex: wrap;
+  justify-content: space-evenly;
+}
+
+.gallery-container {
+  margin-bottom: 10px;
+}
+
+.gallery-img {
+  height: 150px;
+  margin-right: 20px;
+  object-fit: cover;
 }

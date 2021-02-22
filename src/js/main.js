@@ -1,19 +1,30 @@
 import debounce from 'lodash.debounce';
-import imgService from './apiService';
+import apiService from './apiService';
 import updateMarkup from './update-markup';
-import { form, input, imageList, btn } from './refs';
+import { form, imageList, btn } from './refs';
 form.addEventListener('input', debounce(requestHandler, 750));
 
 function requestHandler(event) {
   event.preventDefault();
-  imgService.resetPage();
+  apiService.resetPage();
   imageList.innerHTML = '';
-  imgService.query = event.target.value;
-  imgService.apiService().then(updateMarkup);
+  btn.classList.add('is-hidden');
+  apiService.query = event.target.value;
+
+  apiService.imageService().then(data => {
+    updateMarkup(data);
+    btn.classList.remove('is-hidden');
+  });
 }
 
 function loadMore() {
-  imgService.apiService().then(updateMarkup);
+  apiService.imageService().then(data => {
+    updateMarkup(data);
+    window.scrollTo({
+      top: 1000000000000,
+      behavior: 'smooth',
+    });
+  });
 }
 
 btn.addEventListener('click', loadMore);
