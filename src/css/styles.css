@@ -14,6 +14,31 @@ body {
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
+/* basic styles */
+
+li {
+  list-style: none;
+}
+
+.flexbox {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.centering-horizontally {
+  justify-content: space-between;
+}
+.is-hidden {
+  display: none;
+}
+
+input[name='query'] {
+  margin-bottom: 30px;
+}
+
 .btn {
   padding: 15px 20px;
   background-color: lightblue;
@@ -24,40 +49,31 @@ body {
   margin-top: 30px;
 }
 
-/* .thumb {
-} */
-
-ul {
-  list-style: none;
-}
-.flexbox {
-  display: flex;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
-.is-hidden {
-  display: none;
-}
-
-input[name='query'] {
-  margin-bottom: 30px;
-}
-
 .gallery {
   display: flex;
-  flex: wrap;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
 
-.gallery-container {
-  margin-bottom: 10px;
+.gallery-element-list {
+  margin-right: 15px;
+  margin-bottom: 15px;
 }
 
 .gallery-img {
   height: 150px;
-  margin-right: 20px;
   object-fit: cover;
 }
+
+.stats {
+  justify-content: space-around;
+  padding-top: 10px;
+  background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db);
+}
+
+.material-icons {
+  display: flex;
+}
+
+/* .stats {
+  align-items: stretch;
+} */
