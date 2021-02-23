@@ -1,5 +1,5 @@
 import { form, imageList, btn, btnGoToUp, input } from './refs';
-import { error, info, success } from './notification';
+import { error, info } from './notification';
 
 import debounce from 'lodash.debounce';
 import apiService from './apiService';
@@ -32,6 +32,13 @@ function requestHandler(event) {
         maxTextHeight: null,
       });
     }
+    if (input.value === '') {
+      return info({
+        text: 'Please enter your request',
+        delay: 2000,
+      });
+    }
+
     updateMarkup(data);
     btn.classList.remove('is-hidden');
     btn.classList.add('flexbox');
@@ -68,10 +75,3 @@ function openOriginImgOnClick(event) {
     instance.show();
   }
 }
-
-// const key = '20244739-961dea85be28be305e8bcd893';
-// const baseURL = 'https://pixabay.com/api/';
-// const url = `${baseURL}?image_type=photo&orientation=horizontal&q=page=&per_page=12&key=${key}`;
-
-// fetch(url).then(res => res.json());
-console.dir(input);

@@ -9,7 +9,6 @@ export default {
 
     return fetch(url)
       .then(res => res.json())
-
       .then(({ hits }) => {
         this.incrementPage();
         return hits;
