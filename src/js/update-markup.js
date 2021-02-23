@@ -1,8 +1,8 @@
-import template from '../templates/template.hbs';
+import galleryTplt from '../templates/galleryTplt.hbs';
 import { imageList } from './refs';
 
 function updateMarkup(items) {
-  const markup = template(items);
+  const markup = galleryTplt(items);
   imageList.insertAdjacentHTML('beforeend', markup);
 }
 
