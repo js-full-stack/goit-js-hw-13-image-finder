@@ -8,10 +8,8 @@ export default {
     const url = `${baseURL}?image_type=photo&orientation=horizontal&q=${this.query}&page=${this.page}&per_page=12&key=${key}`;
 
     return fetch(url)
-      .then(res => {
-        if (res.status === 200) return res.json();
-        else console.log('error');
-      })
+      .then(res => res.json())
+
       .then(({ hits }) => {
         this.incrementPage();
         return hits;

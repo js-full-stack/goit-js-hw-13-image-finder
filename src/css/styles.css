@@ -50,12 +50,24 @@ input[name='query']::placeholder {
   font-style: italic;
 }
 
+.container {
+  margin-top: 30px;
+  position: relative;
+}
+
 .btn {
   margin: 0 auto 10px;
 }
 
-.container {
-  margin-top: 30px;
+.btn-go-to-up {
+  position: fixed;
+  bottom: 50px;
+  right: 40px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  color: black;
+  border-color: black;
 }
 
 .photo-card {
@@ -66,17 +78,18 @@ input[name='query']::placeholder {
   display: flex;
   flex-wrap: wrap;
 }
-img {
-  width: 100%;
-}
+
 .gallery-img {
-  width: 350px;
+  width: 300px;
   height: 250px;
+  border-radius: 10%;
   object-fit: cover;
 }
 
 .stats {
   padding-top: 15px;
+  margin-top: 5px;
+  border-radius: 10%;
   background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db);
 }
 
@@ -94,6 +107,9 @@ img {
   margin-right: 3px;
 }
 
-/* .gallery-element-list {
-  width: calc((100% - 90px) / 3);
-} */
+.icon {
+  color: #dc3545;
+  width: 20px;
+  height: 20px;
+  background: url('../images/largearrowup_83708.svg');
+}
