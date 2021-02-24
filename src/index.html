@@ -26,12 +26,25 @@
         />
       </form>
 
-    
+    <!-- Галерея изображений -->
   <ul class="gallery"></ul>
-  <button type='button' class="btn btn-primary btn-lg is-hidden" data-action='load-more'>Show more</button>
-  <template id="modal"></template>
 
-</div>
+  <!-- Кнопка "Показать больше" -->
+  
+  <button type='button' class="btn btn-primary btn-lg btn-load-more is-hidden" data-action='load-more'>
+    <div class="d-flex align-items-center">
+      <span class="text-btn">Show more</span>
+      <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+    </div>
+  </button>
+
+
+
+
+<!-- <button class="btn btn-primary" type="button" disabled>
+  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+  <span class="visually-hidden">Загрузка...</span>
+</button> -->
 </main>
 
 

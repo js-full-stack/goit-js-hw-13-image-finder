@@ -55,6 +55,7 @@
     "bootstrap": "^4.6.0",
     "core-js": "^3.6.5",
     "handlebars": "^4.7.6",
-    "lodash.debounce": "^4.0.8"
+    "lodash.debounce": "^4.0.8",
+    "spin.js": "^4.1.0"
   }
 }

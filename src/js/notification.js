@@ -7,4 +7,4 @@ import '@pnotify/core/dist/BrightTheme.css';
 
 defaultModules.set(PNotifyMobile, {});
 
-export { error, success, info };
+export { error, info };

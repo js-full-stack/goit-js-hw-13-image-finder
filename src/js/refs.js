@@ -4,7 +4,8 @@ const refs = {
   imageList: document.querySelector('.gallery'),
   btn: document.querySelector('[data-action="load-more"]'),
   btnGoToUp: document.querySelector('.btn-go-to-up'),
-  alertWarning: document.querySelector('.alert-warning'),
+  spinnerBtn: document.querySelector('.spinner-border'),
+  spinnerModal: document.querySelector('.modal-spinner'),
 };
 
 export const {
@@ -13,6 +14,6 @@ export const {
   imageList,
   btn,
   btnGoToUp,
-
-  alertWarning,
+  spinnerBtn,
+  spinnerModal,
 } = refs;

@@ -72,6 +72,10 @@ input[name='query']::placeholder {
 
 .photo-card {
   margin: 10px;
+  opacity: 0.8;
+}
+.photo-card:hover {
+  opacity: 1;
 }
 
 .gallery {
@@ -112,4 +116,22 @@ input[name='query']::placeholder {
   width: 20px;
   height: 20px;
   background: url('../images/largearrowup_83708.svg');
+}
+
+.spinner-border {
+  width: 22px;
+  height: 22px;
+}
+
+.btn-load-more {
+  min-width: 200px;
+  min-height: 60px;
+  margin-top: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-btn {
+  margin-right: 15px;
+  font-size: 22px;
 }
