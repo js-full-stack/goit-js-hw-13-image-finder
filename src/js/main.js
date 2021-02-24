@@ -65,7 +65,7 @@ function loadMore() {
   apiService
     .imageService()
     .then(data => {
-      if (data.length <= 10) {
+      if (data.length < 12) {
         updateMarkup(data);
         window.scrollTo({
           top: document.documentElement.offsetHeight,
