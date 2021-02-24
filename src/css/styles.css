@@ -100,11 +100,11 @@ input[name='query']::placeholder {
 }
 
 .gallery-element-list {
-  width: calc((100% - 180px) / 4);
+  width: calc((100% - 90px) / 3);
 }
 
 .gallery-img {
-  height: 250px;
+  height: 220px;
   border-radius: 10%;
   object-fit: cover;
 }
