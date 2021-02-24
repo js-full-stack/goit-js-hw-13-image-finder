@@ -8,12 +8,4 @@ const refs = {
   spinnerModal: document.querySelector('.modal-spinner'),
 };
 
-export const {
-  form,
-  input,
-  imageList,
-  btn,
-  btnGoToUp,
-  spinnerBtn,
-  spinnerModal,
-} = refs;
+export const { form, input, imageList, btn, btnGoToUp, spinnerBtn } = refs;

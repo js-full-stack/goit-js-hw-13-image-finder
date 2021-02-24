@@ -1,5 +1,4 @@
 import * as basicLightbox from 'basiclightbox';
-import { Spinner } from 'spin.js';
 
 function openModalOnClick(event) {
   const tagName = event.target.tagName;

@@ -1,3 +1,7 @@
+:root {
+  --transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 html {
   box-sizing: border-box;
 }
@@ -23,6 +27,10 @@ ul {
 
 li {
   list-style: none;
+}
+
+img {
+  width: 100%;
 }
 
 .flexbox {
@@ -66,13 +74,20 @@ input[name='query']::placeholder {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  color: black;
-  border-color: black;
+  border: 1px solid black;
+  background-color: lightslategrey;
+
+  opacity: 0.5;
+}
+
+.btn-go-to-up--mod {
+  opacity: 0.9;
+  transition: opacity var(--transition);
 }
 
 .photo-card {
-  margin: 10px;
   opacity: 0.8;
+  margin: 15px;
 }
 .photo-card:hover {
   opacity: 1;
@@ -81,10 +96,14 @@ input[name='query']::placeholder {
 .gallery {
   display: flex;
   flex-wrap: wrap;
+  margin: -15px;
+}
+
+.gallery-element-list {
+  width: calc((100% - 180px) / 4);
 }
 
 .gallery-img {
-  width: 300px;
   height: 250px;
   border-radius: 10%;
   object-fit: cover;
@@ -129,6 +148,7 @@ input[name='query']::placeholder {
   margin-top: 15px;
   justify-content: center;
   align-items: center;
+  background: #0dcaf0;
 }
 
 .text-btn {

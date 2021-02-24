@@ -15,7 +15,6 @@
   <body>
     <main>
       <div class="container">
-        <button type="button" class="btn btn-outline-info btn-lg btn-go-to-up is-hidden">Go to up <img class="icon" src="./images/largearrowup_83708.svg"> </button>
 
            <form class="search-form" id="search-form">
         <input
@@ -29,24 +28,20 @@
     <!-- Галерея изображений -->
   <ul class="gallery"></ul>
 
-  <!-- Кнопка "Показать больше" -->
+  <!-- Кнопка "Показать больше" + спиннер -->
   
-  <button type='button' class="btn btn-primary btn-lg btn-load-more is-hidden" data-action='load-more'>
+  <button type='button' class="btn btn-lg btn-load-more is-hidden" data-action='load-more'>
     <div class="d-flex align-items-center">
       <span class="text-btn">Show more</span>
-      <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+      <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>.
+      
+      <!-- Кнопка GoToUp -->
+      <button type="button" class="btn btn-go-to-up is-hidden"><img src="./images/largearrowup_83708.svg"></button>
+
     </div>
   </button>
-
-
-
-
-<!-- <button class="btn btn-primary" type="button" disabled>
-  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-  <span class="visually-hidden">Загрузка...</span>
-</button> -->
 </main>
-
+ 
 
 <script>
   src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
