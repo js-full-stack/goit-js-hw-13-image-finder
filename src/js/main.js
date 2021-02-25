@@ -44,7 +44,7 @@ function requestHandler(event) {
           text: 'Please enter your request',
           delay: 2000,
         });
-        btn.disabled = true;
+        btn.classList.add('is-hidden');
         return;
       }
       updateMarkup(data);
@@ -72,7 +72,7 @@ function loadMore() {
           behavior: 'smooth',
         });
         info({
-          text: `These are the last ${data.length} results for your query`,
+          text: `These are the last ${data.length} results for your `,
           delay: 4000,
           maxTextHeight: null,
         });
@@ -86,7 +86,8 @@ function loadMore() {
       window.scrollTo({
         top:
           document.documentElement.clientHeight +
-          document.documentElement.scrollTop,
+          document.documentElement.scrollTop -
+          80,
         behavior: 'smooth',
       });
 
