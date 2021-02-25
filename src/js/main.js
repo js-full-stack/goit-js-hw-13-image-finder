@@ -83,9 +83,13 @@ function loadMore() {
       updateMarkup(data);
       btn.disabled = false;
       window.scrollTo({
-        top: document.documentElement.offsetHeight,
+        top:
+          document.documentElement.clientHeight +
+          document.documentElement.scrollTop,
         behavior: 'smooth',
       });
+      // console.log(document.documentElement.scrollTop);
+      // console.log(document.documentElement.clientHeight);
     })
     .finally(() => {
       spinnerBtn.classList.add('is-hidden');
